@@ -1,0 +1,238 @@
+
+/*beginning of the Sliders*/
+main{
+  max-width: 1200px;
+  margin: auto;
+  font-family: arial;
+  position: relative;
+  padding-bottom: 50px; /*Because of floating bottom bar*/
+}
+#slider{
+  width: 100%;
+  height: 50vw;
+  overflow: hidden;
+  position: relative;
+  max-height: 600px;
+}
+.button{
+  position: absolute;
+  padding: 10px;
+  height: 25px;
+  z-index: 10;
+  background: #000;
+  color: #fff;
+  top: 50%;
+  margin-top: -12.5px;
+}
+#next.button{
+  right: 0;
+}
+.slide{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 100%;
+  transition: left 1s;
+  overflow: hidden;
+}
+.slide img {
+  width: 100%;
+}
+#slide1{
+  background: #B2B39F;
+  left: 0;
+}
+#slide2{
+  background: #B2B39F;
+}
+/*End of the Sliders*/
+
+
+/*Original code for nav bar from W3 School*/
+/* Moving navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 1000; /*Move nav bar to front*/
+}
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+/*End navigation bar*/
+
+
+/* Main content */
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+/*This is the container for articles*/
+.feed-list {
+ /* max-width: 790px;*/
+  margin: auto;
+  background: #C0C0C0;
+  padding: 10px;
+}
+
+/*This is for the article discriptions*/
+.feed-item {
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+/*BEM Example*/
+.feed-item--right {
+  grid-template-columns: 2fr 2fr;
+  grid-column: 1 / span 2;
+  text-align: right;
+}
+.feed-item--right img{
+  grid-column: 4;
+  grid-row:2;
+}
+.feed-item--right div{
+  grid-column: 1;
+  grid-row:1;
+}
+
+
+/*Floating footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+}
+/*Image Manipulation*/
+.icons{
+  display:inline-block;
+  width: 20px; 
+  height: 20px; 
+   }
+/*End footer stuff*/
+
+.logo{
+  margin-top: 30px;
+}
+
+.ad{
+  max-width: 100%;
+  height: auto;
+  display: block; /*alligns ad in middle*/
+  margin: 0 auto; /*alligns ad in middle*/
+}
+
+.articles{
+  width: 400px;
+  height: auto;
+}
+
+/*This is the container for Livebeat*/
+.livebeat{
+  max-width: 450px;
+  margin: auto;
+  margin-left: 20px;
+  float: right; /*moves area right*/
+}
+.beat-feed{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column: 3 / span 4;
+  grid-row: 1 / span 3;
+  padding-left: 10px;
+}
+.event-date{
+  padding: 10px;
+  text-align: center;
+}
+.event-list{ 
+  width: auto;
+  height: auto;
+  padding: 5px;
+}
+.event-breaker{
+  grid-template-columns: 1fr 2fr;
+  grid-column: 1 / span 2;
+  margin-left: 0; /*streches dive to left*/
+  margin-right: 0; /*streches dive to right*/
+}
+hr.line-breaker-feed{
+  border-top: 1px solid #8c8b8b;
+  background-color: #f0f0f0;
+  float: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+/*End livebeat stuff*/
+
+/*main body stuff*/
+.article-pg-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+.box {
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 100%;
+}
+
+.box-image {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 3;
+}
+.box-description {
+  grid-column: 3 / span 4;
+  grid-row: 1 / span 3;
+  background: #C0C0C0;
+  padding: 10px;
+}
+.box-ad {
+  grid-column: 1 / span 6;
+  grid-row: 4;
+  padding-bottom: 20px;
+  margin: 20px;
+}
+.box-article {
+  grid-column: 1 / span 6;
+  grid-row: 8;
+  max-width: 1200px;
+  margin: auto;
+  font-family: arial;
+  background: #C0C0C0;
+  padding: 10px;
+
+}
+.article-words{
+  max-width: 1200px;
+  margin: auto;
+  font-family: arial;
+  white-space: pre-wrap;
+}   
+hr.line-breaker{
+  border-top: 1px solid #8c8b8b;
+  background-color: #f0f0f0;
+  width: 700px;
+  float: center;
+}
